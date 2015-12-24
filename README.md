@@ -19,7 +19,7 @@ IF occurred under error
 > Execution failed for task ':app:compileDebugJavaWithJavac'
 > Could not find tools.jar
  
-Check Windows Environment Varibles 
+Check Windows Environment Varibles (Like this)
 
 |ANDROID_HOME|D:\Android_IDE\android-sdk-windows |
 |------------|-----------------------------------|
