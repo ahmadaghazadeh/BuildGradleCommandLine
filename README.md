@@ -27,12 +27,16 @@ Check gradle version
  This root folder project run under commnad
 
 > gradle wrapper
+
 	:wrapper UP-TO-DATE
 
 	BUILD SUCCESSFUL
 
 	Total time: 15.868 secs		
+	
+	
 > gradle build
+
 	:app:preBuild UP-TO-DATE
 	:app:preDebugBuild UP-TO-DATE
 	:app:checkDebugManifest
