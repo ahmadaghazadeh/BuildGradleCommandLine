@@ -2,9 +2,28 @@
 
 Build Apk Commnad Line Windows
 
-Check Windows Environment Varibles 
+Run cmd in windows
+
+First check gradle version
+
+> gradle -version
+
+This root folder project
+
+> gradle wrapper
+
+> gradle build
+
+IF occurred under error 
+
+> Execution failed for task ':app:compileDebugJavaWithJavac'
+> Could not find tools.jar
  
+Check Windows Environment Varibles 
+
 |ANDROID_HOME|D:\Android_IDE\android-sdk-windows |
 |------------|-----------------------------------|
 |JAVA_HOME   |C:\Program Files\Java\jdk1.7.0_75  |
+
+
  
