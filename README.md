@@ -24,8 +24,15 @@ Check gradle version
 	 JVM:          1.7.0_75 (Oracle Corporation 24.75-b04)
 	 OS:           Windows 8.1 6.3 amd64 
 
-> gradlew build
+ This root folder project run under commnad
 
+> gradle wrapper
+	:wrapper UP-TO-DATE
+
+	BUILD SUCCESSFUL
+
+	Total time: 15.868 secs		
+> gradle build
 	:app:preBuild UP-TO-DATE
 	:app:preDebugBuild UP-TO-DATE
 	:app:checkDebugManifest
@@ -109,11 +116,6 @@ Check gradle version
 
 	Total time: 1 mins 9.796 secs
 
-This root folder project
-
-> gradle wrapper
-
-> gradle build
 
 IF occurred under error 
 
