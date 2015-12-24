@@ -4,7 +4,7 @@ Build Apk Commnad Line Windows
 
 Run cmd in windows
 
-First check gradle version
+Check gradle version
 
 > gradle -version
 
