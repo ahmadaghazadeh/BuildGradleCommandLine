@@ -9,3 +9,5 @@ android:
     - android-23
     # Additional components
     - extra-android-support_v4
+before_script:
+  - chmod +x gradlew
