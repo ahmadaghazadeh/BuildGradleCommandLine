@@ -1,13 +1,36 @@
 language: android
-jdk: oraclejdk7
+  # Emulator Management: Create, Start and Wait
+branches:
+  only:
+    - master
+before_install:
+  #  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
+  #  - emulator -avd test -no-skin -no-audio -no-window &
+before_script:
+  #  - ./wait_for_emulator
+  #  - adb shell input keyevent 82 &
+script:
+     - ./gradlew assembleDebug
+    #
+    # for future use run tests      ./gradlew connectedInstrumentTest
+    ./gradlew connectedCheck        # all builds and tests          
+    # for only debuf                ./gradlew assembleDebug
 android:
   components:
-
     # The BuildTools version used by your project
     - build-tools-23.0.2
+    # Uncomment the lines below if you want to
+    # use the latest revision of Android SDK Tools
+    - platform-tools
+    - tools
     # The SDK version used to compile your project
     - android-23
     # Additional components
-    - extra-android-support_v4
-before_script:
-  ./gradle assembleDebug 
+    - extra-android-support
+    # - extra-google-google_play_services
+    # - extra-google-m2repository
+    # - extra-android-m2repository
+    # - addon-google_apis-google-22
+    # Specify at least one system image,
+    # if you need to run emulator(s) during your tests
+    # - sys-img-armeabi-v7a-android-22
