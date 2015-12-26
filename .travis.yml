@@ -4,14 +4,17 @@ branches:
   only:
     - master
 before_install:
-  set fileformat=unix
+  
   #  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
   #  - emulator -avd test -no-skin -no-audio -no-window &
 before_script:
+  - set fileformat=unix
   - chmod +x gradlew
   #  - ./wait_for_emulator
   #  - adb shell input keyevent 82 &
 script:
+     - sudo mvn clean package
+     - sudo mvn install
     ./grailsw refresh-dependencies
     ./gradlew assembleDebug    
     ./gradlew connectedInstrumentTest # for future use run tests  
