@@ -4,7 +4,7 @@ branches:
   only:
     - master
 before_install:
-   - chmod +x gradlew   ./gradlew build connectedCheck
+   - chmod +x gradlew  
  
   #  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
   #  - emulator -avd test -no-skin -no-audio -no-window &
@@ -12,7 +12,8 @@ before_script:
   #  - ./wait_for_emulator
   #  - adb shell input keyevent 82 &
 script:
-     - ./gradlew assembleDebug
+     ./gradlew build connectedCheck
+     ./gradlew assembleDebug
     #
     # for future use run tests      ./gradlew connectedInstrumentTest
     ./gradlew connectedCheck        # all builds and tests          
