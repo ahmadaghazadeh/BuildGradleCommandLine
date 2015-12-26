@@ -1,3 +1,4 @@
+cache: FALSE
 sudo: false
 language: android
 jdk:
