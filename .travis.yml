@@ -1,35 +1,34 @@
-language: groovy
-  # Emulator Management: Create, Start and Wait
+sudo: false
+language: android
+jdk:
+  - oraclejdk7
 branches:
   only:
     - master
 before_install:
-  
   #  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
   #  - emulator -avd test -no-skin -no-audio -no-window &
 before_script:
-  - set fileformat=unix
   - chmod +x gradlew
   #  - ./wait_for_emulator
   #  - adb shell input keyevent 82 &
 script:
-     - sudo mvn clean package
-     - sudo mvn install
-    ./grailsw refresh-dependencies
-    ./gradlew assembleDebug    
-    ./gradlew connectedInstrumentTest # for future use run tests  
-    ./gradlew connectedCheck        # all builds and tests          
-    ./gradlew assembleDebug # for only debuf
+     
+    #./grailsw refresh-dependencies
+    #./gradlew assembleDebug    
+    #./gradlew connectedInstrumentTest # for future use run tests  
+    #./gradlew connectedCheck        # all builds and tests          
+    #./gradlew assembleDebug # for only debuf
 android:
   components:
     # The BuildTools version used by your project
-    - build-tools-23.0.2
+    - build-tools-22.0.1
+    # The SDK version used to compile your project
+    - android-22
     # Uncomment the lines below if you want to
     # use the latest revision of Android SDK Tools
-    - platform-tools
-    - tools
-    # The SDK version used to compile your project
-    - android-23
+    #- platform-tools
+    #- tools
     # Additional components
     # extra-android-support
     # - extra-google-google_play_services
