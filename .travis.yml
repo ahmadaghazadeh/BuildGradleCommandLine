@@ -1,4 +1,4 @@
-language: android
+language: groovy
   # Emulator Management: Create, Start and Wait
 branches:
   only:
@@ -28,7 +28,7 @@ android:
     # The SDK version used to compile your project
     - android-23
     # Additional components
-    - extra-android-support
+    # extra-android-support
     # - extra-google-google_play_services
     # - extra-google-m2repository
     # - extra-android-m2repository
