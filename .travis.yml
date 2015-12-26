@@ -12,11 +12,10 @@ before_script:
   #  - adb shell input keyevent 82 &
 script:
     ./grailsw refresh-dependencies
-     ./gradlew assembleDebug
-    #
-    # for future use run tests      ./gradlew connectedInstrumentTest
+    ./gradlew assembleDebug    
+    ./gradlew connectedInstrumentTest # for future use run tests  
     ./gradlew connectedCheck        # all builds and tests          
-    # for only debuf                ./gradlew assembleDebug
+    ./gradlew assembleDebug # for only debuf
 android:
   components:
     # The BuildTools version used by your project
